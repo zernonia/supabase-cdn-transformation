@@ -7,11 +7,11 @@
     Secured & Simple <strong><a href="https://supabase.io/">Supabase</a> Storage CDN & Transformation (Self-hosted).</strong>
     <br />
     <br />
-    <a href="https://supabase-schema.vercel.app/">View Demo</a>
+    <a href="https://blog.zernonia.com/supabase-storage-cdn-and-transformation-with-serverless-function-unofficial">View Tutorial</a>
     ·
-    <a href="https://github.com/zernonia/supabase-schema/issues">Report Bug</a>
+    <a href="https://github.com/zernonia/supabase-cdn-transformation/issues">Report Bug</a>
     ·
-    <a href="https://github.com/zernonia/supabase-schema/issues">Request Feature</a>
+    <a href="https://github.com/zernonia/supabase-cdn-transformation/issues">Request Feature</a>
   </p>
 
   <p align="center">
@@ -19,7 +19,7 @@
   </p>
 </p>
 
-![Supabase Schema](https://cdn.hashnode.com/res/hashnode/image/upload/v1631296527320/TH24GsjXyv.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress)
+![Supabase CDN & Transformation](https://cdn.hashnode.com/res/hashnode/image/upload/v1631296527320/TH24GsjXyv.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress)
 
 ## 🚀 Features
 
@@ -50,7 +50,27 @@ Then, I found out that [Supabase Storage](https://supabase.io/storage)'s CDN and
 5. Wait for deployment
 6. Congratulations! Your serverless function is up and running! Enjoy !!! 🎉
 7. 🌟 this repo, 🐤 this project, ☕ buy me a coffee?
-8. Learn more from this [Blog post]().
+8. Learn more from this [Blog post](https://blog.zernonia.com/supabase-storage-cdn-and-transformation-with-serverless-function-unofficial).
+
+## How to use
+
+Here are some of the parameter to pass along the new image's url.
+
+```sh
+w: width          (number of pixel)    // optional
+h: height         (number of pixel)    // optional
+f: file_name      (eg: avatar.png)
+b: bucket_name    (eg: static)
+q: quality        (0 to 100)           // optional
+
+```
+
+1. Click `Deploy` button above and follow the instruction above.
+2. Wrap all the images url in your project's `<img>` with the following code. <br>
+   `https://{ url-for-the-serverless-function-you-just-deployed }/api/resize?...`
+3. Pass the parameter into the url as query string. (eg:) <br>
+   `https://.../api/resize?f=avatar.png&b=static&w=1200`
+4. Insert the link into `<img src="here" >` and you are done!
 
 <!--
 ## ➕ Contributing
